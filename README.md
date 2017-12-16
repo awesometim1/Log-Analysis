@@ -84,7 +84,7 @@ To Use:
 6. `cd` into the vagrant directory and use this command to create and load the news database: `psql -d news -f newsdata.sql`
 7. Type in the following command: `python3 news.py`
 
-If done correctly, you will see the intended output! (**sample output can be found in this repository**)
+If done correctly, you will see the intended output! (**sample output can be found in this repository as a file named loganalysisoutput.txt**)
 
 ## Program Design 
 
