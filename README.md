@@ -69,7 +69,6 @@ To Install:
 1. `pip install psql`
 2. `pip install python3`
 3. `pip install psycopg2`
-4. `cd` into the vagrant directory and use this command to create and load the news database: `psql -d news -f newsdata.sql`
 
 
 
@@ -82,9 +81,10 @@ To Use:
 3. Navigate to the vagrant folder (Use `cd`)
 4. Use the command `vagrant up` 
 5. Then log in using `vagrant ssh`
-6. Type in the following command: `python3 news.py`
+6. `cd` into the vagrant directory and use this command to create and load the news database: `psql -d news -f newsdata.sql`
+7. Type in the following command: `python3 news.py`
 
-If done correctly, you will see the intended output!
+If done correctly, you will see the intended output! (**sample output can be found in this repository**)
 
 ## Program Design 
 
