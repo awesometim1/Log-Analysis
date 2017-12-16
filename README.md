@@ -20,11 +20,11 @@ Log Analysis is a tool for a fictional news site sql database. It uses relations
 **The SQL Database Diagram**
 
 **News** ( Main)
-|Name    |
-|:---:   |
-|articles|
-|authors |  
-|log     |
+| Name    |
+| :---:   |
+| articles|
+| authors |  
+| log     |
 
 **Articles**
 | Name| Type | 
