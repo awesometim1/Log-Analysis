@@ -16,6 +16,7 @@ Log Analysis is a tool for a fictional news site sql database. It uses relations
 **The SQL Database Diagram**
 
 **News** (Main)
+
 | Name    |
 |:---:   |
 |articles|
@@ -23,6 +24,7 @@ Log Analysis is a tool for a fictional news site sql database. It uses relations
 |log     |
 
 **Articles**
+
 | Name| Type | 
 |:---:|:---:|
 |author| integer|
@@ -34,6 +36,7 @@ Log Analysis is a tool for a fictional news site sql database. It uses relations
 |id | integer|
 
 **Authors**
+
 | Name| Type | 
 |:---:|:---:|
 |name| text|
@@ -41,6 +44,7 @@ Log Analysis is a tool for a fictional news site sql database. It uses relations
 |id | integer|
 
 **Log**
+
 | Name| Type | 
 |:---:|:---:|
 |path| text|
