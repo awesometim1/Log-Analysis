@@ -1,14 +1,10 @@
-fullstack-nanodegree-vm
-=============
-
-Common code for the Relational Databases and Full Stack Fundamentals courses
-#Log Analysis 
+# Log Analysis 
 ---
-##Summary
+## Summary
 
 Log Analysis is a tool for a fictional news site sql database. It uses relationships between tables within the database to extract the exact information that an end user needs. For example, the first functionality is implemented using subqueries and relating articles to log and accessing the number of get requests made for a certain sub domain. It does this by first extracting the article "slug" from log and using that subquery to count how many views a certain article received. A visual diagram of this database can be found below.
 
-##Main Functions of this tool
+## Main Functions of this tool
 
 1. Finds the number of views for each article and lists them in order (most popular first)
 
@@ -19,12 +15,12 @@ Log Analysis is a tool for a fictional news site sql database. It uses relations
 
 **The SQL Database Diagram**
 
-**News** ( Main)
+**News** (Main)
 | Name    |
-| :---:   |
-| articles|
-| authors |  
-| log     |
+|:---:   |
+|articles|
+|authors |  
+|log     |
 
 **Articles**
 | Name| Type | 
@@ -54,11 +50,11 @@ Log Analysis is a tool for a fictional news site sql database. It uses relations
 |time | timestamp|
 |id | integer|
 
-##Installation 
+## Installation 
 
 Log Analysis uses `psql`, `python`, and the `psycopg2` module for python
 
-###Required Files and Programs
+### Required Files and Programs
 1. Vagrant  --- [Download Here](https://www.vagrantup.com/downloads.html)
 2. FSND-Virtual-Machine.zip --- [Download here](https://d17h27t6h515a5.cloudfront.net/topher/2017/August/59822701_fsnd-virtual-machine/fsnd-virtual-machine.zip)
 3. newsdata.sql --- [Download here](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip)
@@ -73,7 +69,7 @@ To Install:
 
 
 
-##Usage 
+## Usage 
 
 To Use:
 
@@ -86,7 +82,7 @@ To Use:
 
 If done correctly, you will see the intended output!
 
-##Program Design 
+## Program Design 
 
 1. Python: 
 
@@ -99,23 +95,23 @@ If done correctly, you will see the intended output!
 
 2. SQL: 
 
-####Finding the top 3 article rankings
+#### Finding the top 3 article rankings
 	1. Subquery that finds the accessed path and extracts article "slug".
 
 	2. Main query to count where the accessed slug matches article slug and group by title of the article order by count descending.
 
-####Finding author rankings
+#### Finding author rankings
 	1. Subquery that finds the accessed path and extracts article "slug".
 
 	2. Main query that counts where the article slug matches the extracted slug and where the article author matches author's id, grouped by author name and ordered by num descending.
 
-####Finding dates with error percentage of more than 1%
+#### Finding dates with error percentage of more than 1%
 	1. Subquery that extracts date from the timestamp and also sums up the http requests by their type (only 2: 200 OK and 404 NOT FOUND) then groups them by date requested.
 
 	2. Main Query that first converts the date extracted to Mont, DD YYYY format and performs an arithmetic that goes as follows: 404 Requests / (TOTAL# OF REQUESTS) then groups them by date and percentage values and orders by percentage values descending. Also limits to the top 1 result.
 
 
-##--Tim Lee--
+## --Tim Lee--
 
 Finalized: December 11, 2017
 Edited: December 12, 2017
